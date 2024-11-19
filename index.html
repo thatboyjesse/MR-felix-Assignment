@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-gray-800 text-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-xl">My Product</a>
+            <div class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li>
+                        <a href="#" class="relative">
+                            About Us
+                            <svg class="w-4 h-4 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <ul class="absolute hidden bg-gray-800 text-white mt-2 rounded-md shadow-md">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Our Team</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Our Story</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <button class="md:hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Get Started
+            </button>
+        </nav>
+    </header>
+
+    <section class="bg-gray-100 py-24">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-4">Revolutionize Your Workflow</h1>
+            <p class="text-lg mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Started</button>
+        </div>
+    </section>
+
+    <section class="bg-white py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 border border-gray-200 rounded-md shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Feature 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-md shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Feature 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="dropdown-button text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded">
+                        See More
+                        <svg class="w-4 h-4 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="hidden dropdown-content mt-2 rounded-md shadow-md">
+                        <ul class="bg-gray-100 text-gray-800">
+                            <li class="p-2 hover:bg-gray-200">Subfeature 1</li>
+                            <li class="p-2 hover:bg-gray-200">Subfeature 2</li>
+                            <li class="p-2 hover:bg-gray-200">Subfeature 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-md shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Feature 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const dropdownButtons = document.querySelectorAll('.dropdown-button');
+
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const dropdownContent = button.nextElementSibling;
+                dropdownContent.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <section class="bg-gray-100 py-24">
+        <div class="container">
+            <h2 class="text-center text-3xl font-bold mb-8">What Our Customers Say</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h5 class="card-title">John Doe</h5>
+                                <p class="card-text">CEO, Acme Corp</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 My Product</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
